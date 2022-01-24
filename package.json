@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Build Nodejs server with no code",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
