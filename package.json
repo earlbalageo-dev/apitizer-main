@@ -1,0 +1,16 @@
+{
+  "name": "apitizer",
+  "version": "1.0.0",
+  "description": "Build Nodejs server with no code",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "express"
+  ],
+  "author": "Earl Balageo",
+  "license": "ISC"
+}
