@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ListGroup } from "react-bootstrap";
 import styled from "styled-components";
-const Item = ({ name, logo, folders }) => {
+const Item = ({ name, files }) => {
   const [expand, setExpand] = useState(true);
 
   const handleExpand = () => {
@@ -13,15 +13,24 @@ const Item = ({ name, logo, folders }) => {
   };
 
   return (
-    <ListItem action>
-      <div onClick={handleExpand} className='d-flex me-auto'>
-        <i
-          className={`fas ${expand ? "fa-chevron-down" : "fa-chevron-up"} me-4`}
-        ></i>
-        <p className='m-0'>{name}</p>
-      </div>
-      <i className='fas fa-ellipsis-h'></i>
-    </ListItem>
+    <>
+      <ListItem action>
+        <div onClick={handleExpand} className='d-flex me-auto'>
+          <i
+            className={`fas ${
+              expand ? "fa-chevron-down" : "fa-chevron-up"
+            } me-4`}
+          ></i>
+          <p className='m-0'>{name}</p>
+        </div>
+        <i className='fas fa-ellipsis-h'></i>
+      </ListItem>
+      {files.map((file) => (
+        <ListItem key={file.id} action>
+          {file.name}
+        </ListItem>
+      ))}
+    </>
   );
 };
 
