@@ -2,7 +2,7 @@ import { Navbar, Container, Nav } from "react-bootstrap";
 import styled from "styled-components";
 const TopNav = () => {
   return (
-    <Topnav variant='dark'>
+    <Topnav bg='dark' variant='dark'>
       <Container>
         <Navbar.Brand href='#home'>Apitizer</Navbar.Brand>
         <Nav className='me-auto'>
@@ -15,8 +15,6 @@ const TopNav = () => {
   );
 };
 
-const Topnav = styled(Navbar)`
-  background-color: #fba92c;
-`;
+const Topnav = styled(Navbar)``;
 
 export default TopNav;
