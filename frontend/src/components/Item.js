@@ -13,9 +13,6 @@ const Item = ({ name, files }) => {
     }
   };
 
-  const handleNewFolder = () => {
-    console.log("new folder");
-  };
   const handleNewFile = () => {
     console.log("new File");
   };
@@ -33,8 +30,7 @@ const Item = ({ name, files }) => {
         </div>
 
         <div>
-          <i onClick={handleNewFolder} className='me-3 fas fa-folder-plus'></i>
-          <i onClick={handleNewFile} className='far fa-file'></i>
+          <i onClick={handleNewFile} className='fa fa-plus'></i>
         </div>
       </ListItem>
       <div className={`${expand ? "show" : "hide"}`}>
