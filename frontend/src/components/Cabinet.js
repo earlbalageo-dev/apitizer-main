@@ -50,7 +50,7 @@ const Mod = [
 const Cabinet = () => {
   return (
     <Main>
-      <Item name='Models' files={Mod} />
+      <Item name='Model' files={Mod} />
       <Item name='API' files={Mod} />
     </Main>
   );

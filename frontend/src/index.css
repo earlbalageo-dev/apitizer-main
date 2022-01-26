@@ -9,4 +9,11 @@ ul {
   list-style: none;
 }
 
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
 /* #fba92c */

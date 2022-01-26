@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ListGroup } from "react-bootstrap";
 import styled from "styled-components";
+import Folder from "./Folder";
 const Item = ({ name, files }) => {
   const [expand, setExpand] = useState(true);
 
@@ -10,6 +11,13 @@ const Item = ({ name, files }) => {
     } else {
       setExpand(true);
     }
+  };
+
+  const handleNewFolder = () => {
+    console.log("new folder");
+  };
+  const handleNewFile = () => {
+    console.log("new File");
   };
 
   return (
@@ -23,13 +31,17 @@ const Item = ({ name, files }) => {
           ></i>
           <p className='m-0'>{name}</p>
         </div>
-        <i className='fas fa-ellipsis-h'></i>
+
+        <div>
+          <i onClick={handleNewFolder} className='me-3 fas fa-folder-plus'></i>
+          <i onClick={handleNewFile} className='far fa-file'></i>
+        </div>
       </ListItem>
-      {files.map((file) => (
-        <ListItem key={file.id} action>
-          {file.name}
-        </ListItem>
-      ))}
+      <div className={`${expand ? "show" : "hide"}`}>
+        {files.map((file) => (
+          <Folder key={file.id} file={file} />
+        ))}
+      </div>
     </>
   );
 };
