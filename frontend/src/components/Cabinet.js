@@ -1,6 +1,6 @@
 import { ListGroup } from "react-bootstrap";
 import styled from "styled-components";
-import Item from "../components/Item";
+import Items from "../components/Items";
 
 const Mod = [
   {
@@ -50,8 +50,8 @@ const Mod = [
 const Cabinet = () => {
   return (
     <Main>
-      <Item name='Model' files={Mod} />
-      <Item name='API' files={Mod} />
+      <Items name='Model' files={Mod} />
+      <Items name='API' files={Mod} />
     </Main>
   );
 };

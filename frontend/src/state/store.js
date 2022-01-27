@@ -3,12 +3,12 @@ import thunk from "redux-thunk";
 import reducers from "./reducers";
 import { composeWithDevTools } from "redux-devtools-extension";
 
-const userInfoFromLocalStorage = localStorage.getItem("userInfo")
-  ? JSON.parse(localStorage.getItem("userInfo"))
-  : null;
+const modelsFromLocalStorage = localStorage.getItem("models")
+  ? JSON.parse(localStorage.getItem("models"))
+  : [];
 
 const initialState = {
-  user: { userInfo: userInfoFromLocalStorage },
+  model: modelsFromLocalStorage,
 };
 
 const middleware = [thunk];
